@@ -4,9 +4,45 @@
   font-optical-sizing: auto;
 }
 
+@media (max-width: 768px) {
+    
+}
+
 * {
     background-color: #F3F5FC;
     font-family: inter;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+header {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.container {
+    grid-row: 2;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "left right";
+}
+
+.left-container {
+    grid-area: left;
+    padding: 10px;
+}
+
+.right-container {
+    position: relative;
+    grid-area: right;
+    padding: 10px;
 }
 
 h1 {
@@ -28,6 +64,7 @@ h1 {
     line-height: 48px;
     border-radius: 15px;
     gap: 8px;
+    margin-right: 20px;
 }
 
 .btn-decript {
@@ -59,6 +96,12 @@ h4 {
     align-items: center;
 }
 
+.informative {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
 .btn-copy {
     background-color: white;
     width: 200px;
@@ -73,12 +116,69 @@ h4 {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     color: #0A3871;
     font-weight: 400;
-    size: 32px;
     line-height: 48px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .logoFooter {
-    border-radius: 5px;
+    border-radius: 8px;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+}
+
+.textBox {
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    font-size: 36px;
+    color: #0A3871;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    resize: none;
+    font-family: inter;
+    vertical-align: top;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Torna os containers em uma coluna */
+        grid-template-areas: 
+            "left"
+            "right";
+    }
+
+    .right-container, .left-container {
+        padding: 20px;
+    }
+
+    .btn-cript, .btn-decript, .btn-copy {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .informative {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .logoFooter {
+        position: static;
+        margin-top: 20px;
+    }
 }
