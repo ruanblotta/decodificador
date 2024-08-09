@@ -1,0 +1,84 @@
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+* {
+    background-color: #F3F5FC;
+    font-family: inter;
+}
+
+h1 {
+    color: #0A3871;
+    font-weight: 400;
+    size: 32px;
+    line-height: 48px;
+}
+
+.btn-cript {
+    background-color: #0A3871;
+    width: 200px;
+    height: 48px;
+    top: 168px;
+    left: 240px;
+    color: white;
+    font-weight: 400;
+    size: 32px;
+    line-height: 48px;
+    border-radius: 15px;
+    gap: 8px;
+}
+
+.btn-decript {
+    background-color: #D8DFE8;
+    width: 200px;
+    height: 48px;
+    top: 168px;
+    left: 240px;
+    color: #0A3871;
+    size: 32px;
+    line-height: 48px;
+    border-radius: 15px;
+    gap: 8px;
+}
+
+h3 {
+    color: #343A40;
+    font-weight: 700;
+    size: 24px;
+    line-height: 28.8px;
+    align-items: center;
+}
+
+h4 {
+    color: #495057;
+    font-weight: 400;
+    size: 16px;
+    line-height: 4px;
+    align-items: center;
+}
+
+.btn-copy {
+    background-color: white;
+    width: 200px;
+    height: 48px;
+    top: 168px;
+    left: 240px;
+    color: #0A3871;
+    size: 32px;
+    line-height: 48px;
+    border-radius: 15px;
+    gap: 8px;
+}
+
+footer {
+    color: #0A3871;
+    font-weight: 400;
+    size: 32px;
+    line-height: 48px;
+}
+
+.logoFooter {
+    border-radius: 5px;
+}
