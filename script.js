@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnDecript = document.querySelector('.btn-decript');
     const msgDisplay = document.querySelector('.right-container h3');
     const errorMsg = 'Nenhuma mensagem encontrada';
+    const btnCopy = document.querySelector('.btn-copy');
 
     const chave = {
         'e': 'enter',
@@ -29,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         msgDisplay.textContent = mensagem;
     }
 
+    function  copiarAreaDeTransferencia(texto) {
+        navigator.clipboard.writeText(texto).then(() => {
+            alert('Sua mensagem foi copiada.');
+        }).catch(err => {
+            alert('Não foi possível copiar a mensagem. Tente novamente');
+            console.error('Erro ao copiar', err);
+        });
+    }
+
     btnCript.addEventListener('click', () => {
         const texto = textInput.value;
         if (texto) {
@@ -43,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const msgDecriptada = decriptMsg(texto);
             msgAtualizada(msgDecriptada);
         }
+    });
+
+    btnCopy.addEventListener('click', () => {
+        const texto = msgDisplay.textContent;
+        if (texto && texto !== errorMsg) {
+            copiarAreaDeTransferencia(texto);
+        } else {
+            alert('Não há mensagem para copiar.');
+        }
+ 
     });
 
     msgAtualizada(errorMsg);
